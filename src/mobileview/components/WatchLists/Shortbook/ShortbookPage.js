@@ -1,22 +1,25 @@
 import React from 'react'
-import { Container, Box, Typography, Grid, Button } from '@material-ui/core'
-import SearchIcon from '@mui/icons-material/Search';
+import { Box, Typography, Grid, Button } from '@material-ui/core'
+import ClearIcon from '@mui/icons-material/Clear';
 import MoreVertTwoToneIcon from '@mui/icons-material/MoreVertTwoTone';
 import { makeStyles } from '@mui/styles';
 
-//Images
-import ProductImg1 from "../../../assets/mobImages/item1.png";
-import ProductImg2 from "../../../assets/mobImages/item2.png";
-import ProductImg3 from "../../../assets/mobImages/item3.png";
-import ProductImg4 from "../../../assets/mobImages/item4.png";
-import shortbook from "../../../assets/mobImages/shortbook-white/shortbook.png"
-import shopping from "../../../assets/mobImages/commerce_and_shopping.svg"
+import ShortbookNew from "./ShortbookNew"
 
-function WatchListItemRemoved() {
+//Images
+import ProductImg1 from "../../../../assets/mobImages/item1.png";
+import ProductImg2 from "../../../../assets/images/oral_sus.svg";
+import ProductImg3 from "../../../../assets/mobImages/item3.png";
+import ProductImg4 from "../../../../assets/mobImages/item4.png";
+import shopping from "../../../../assets/mobImages/commerce_and_shopping.svg"
+import wishlist from "../../../../assets/mobImages/wishlist-white/wishlist.png"
+
+
+function ShortbookPage() {
 
     const useStyles = makeStyles({
         spacing : {
-            marginTop: '12px',
+            marginTop: '8px',
             backgroundColor: '#f4f9f9',
             borderRadius: '4px',
             padding: '12px 0px'
@@ -25,9 +28,10 @@ function WatchListItemRemoved() {
 
     const classess = useStyles();
 
-    return ( 
-        <Container className="orders-page">
-                <Box sx={{
+
+    return (
+        <>
+            {/* <Box sx={{
                     display : 'flex',
                     justifyContent: 'space-between',
                     marginTop: '16px',
@@ -35,18 +39,18 @@ function WatchListItemRemoved() {
                     fontSize: '12px',
                     color: '#2e3e6a',
                     }}>
-                    <Typography variant='h6'>All Products</Typography>
-                    <SearchIcon className="mob-watchlist-search-icon" />
+                    <Typography variant='h6' className="shortbook-page-title">My Shortbook List</Typography>
+                    <MoreVertTwoToneIcon />
                 </Box>
                 <div className="orders-popUp">
-                    <h6 style={{fontSize: "11px"}}>Calpol 500mg tablet successfully removed</h6>
+                    <h6>Refort 200ml Syrup Added In Wishlist</h6>
                 </div>
                 <Grid container spacing={2}>
                     <Grid item xs={6} spacing={2} >
                         <div className={classess.spacing}>
                             <div className="icon-container">
                                 <img src={shopping} alt="discount" />
-                                <MoreVertTwoToneIcon />
+                                <button className="icon-container-button"><ClearIcon sx={{float: 'right'}} /></button>
                             </div>
                                 <img src={ProductImg1} alt="img1" className="watchlist-image"/>
                                 <Typography variant='subtitle1' className="watchlist-productTitle">Refort200mlSyrup</Typography>
@@ -57,13 +61,13 @@ function WatchListItemRemoved() {
                                 <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
                                 <div className="shortbook-container">
                                 <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-                                    <img src={shortbook} alt="shortbook"/>
+                                    <img src={wishlist} alt="wishlist"/>
                                 </div>
                         </div>    
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
-                            <MoreVertTwoToneIcon sx={{float: 'right'}} />
+                        <button className="icon-container-button2"><ClearIcon sx={{float: 'right'}} /></button>
                             <img src={ProductImg2} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' className="watchlist-productTitle">Cremaffin Plus Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
@@ -73,13 +77,13 @@ function WatchListItemRemoved() {
                             <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
                             <div className="shortbook-container">
                             <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-                                <img src={shortbook} alt="shortbook"/>
+                                <img src={wishlist} alt="wishlist"/>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
-                            <MoreVertTwoToneIcon sx={{float: 'right'}} />
+                        <button className="icon-container-button2"><ClearIcon sx={{float: 'right'}} /></button>
                             <img src={ProductImg3} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' className="watchlist-productTitle">ChildLife Cough Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
@@ -89,13 +93,13 @@ function WatchListItemRemoved() {
                             <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
                             <div className="shortbook-container">
                             <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-                                <img src={shortbook} alt="shortbook"/>
+                                <img src={wishlist} alt="wishlist"/>
                             </div>
                         </div>                   
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
-                            <MoreVertTwoToneIcon sx={{float: 'right'}} />
+                        <button className="icon-container-button2"><ClearIcon sx={{float: 'right'}} /></button>
                             <img src={ProductImg4} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' className="watchlist-productTitle">Vasu Step Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
@@ -105,13 +109,14 @@ function WatchListItemRemoved() {
                             <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
                             <div className="shortbook-container">
                                 <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-                                <img src={shortbook} alt="shortbook"/>
+                                <img src={wishlist} alt="wishlist"/>
                             </div>
                         </div>
                     </Grid>
-                </Grid>
-        </Container>
+                </Grid> */}
+                <ShortbookNew />
+        </>
     )
 }
 
-export default WatchListItemRemoved
+export default ShortbookPage

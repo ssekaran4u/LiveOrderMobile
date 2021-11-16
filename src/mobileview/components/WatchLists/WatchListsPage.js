@@ -8,6 +8,9 @@ import WatchListSearch from "./WatchListSearch"
 import WatchListViewOnProduct from './WatchListViewOnProduct';
 import WatchListOption from "./WatchListOption"
 
+//Shortbook
+import ShortbookPage from "./Shortbook/ShortbookPage"
+
 //Images
 import ProductImg1 from "../../../assets/mobImages/item1.png";
 import ProductImg2 from "../../../assets/mobImages/item2.png";
@@ -40,7 +43,7 @@ function WatchListsPage() {
                     fontSize: '12px',
                     color: '#2e3e6a',
                     }}>
-                    <Typography variant='h6'>All Products</Typography>
+                    <Typography variant='h6' className="shortbook-page-title">All Products</Typography>
                     <SearchIcon className="mob-watchlist-search-icon" />
                 </Box>
                 <Grid container spacing={2}>
@@ -114,8 +117,9 @@ function WatchListsPage() {
                 </Grid> */}
                 {/* <WatchListSearch /> */}
                 {/* <WatchListOption /> */}
-                <WatchListViewOnProduct />
+                {/* <WatchListViewOnProduct /> */}
                 {/* <WatchListItemRemoved /> */}
+                <ShortbookPage />
         </Container>
     )
 }

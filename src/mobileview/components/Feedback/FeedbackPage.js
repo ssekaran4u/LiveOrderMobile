@@ -179,7 +179,7 @@ const FeedbackPage = (props) => {
   // console.log(inputs, "fuydgudyf");
 
   return (
-      <div className="mob-profile-sec-space">
+      <div className="mob-profile-sec-space DsMob">
           <h4 className="mob-addbranch-drawer-title mb-12">We value your feedback. Please send your feedback in the below form</h4>
           <p className="login-error-msg min-height-none mb-10">{errMsg.toLowerCase()}</p>
           <TextField

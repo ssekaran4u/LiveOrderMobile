@@ -1,9 +1,9 @@
 
 /* start mobile css */
-.mob-auth-container .MuiOutlinedInput-adornedStart {
+.DsMob .MuiOutlinedInput-adornedStart {
 	padding-left: 0;
 }
-.mob-auth-container .MuiInputAdornment-positionStart {
+.DsMob .MuiInputAdornment-positionStart {
 	margin-right: 0;
 	width: 60px !important;
 	background: #f6f8fd;
@@ -16,7 +16,7 @@
 	min-width: 60px;
 	max-height: 44px;
 }
-.mob-auth-container .auth-input.mob-input .MuiOutlinedInput-input, .mob-auth-container .MuiOutlinedInput-input.MuiInputBase-inputAdornedStart.MuiInputBase-inputAdornedEnd {
+.DsMob .auth-input.mob-input .MuiOutlinedInput-input, .mob .MuiOutlinedInput-input.MuiInputBase-inputAdornedStart.MuiInputBase-inputAdornedEnd {
 	font-size: 13px;
 	color: #5b636a;
 	font-weight: 500;
@@ -26,7 +26,7 @@
 	border-left: 1px solid var(--light-blue-grey);
 	border-radius: revert !important;
 }
-.mob-auth-container .MuiInputBase-adornedEnd.MuiInputBase-adornedStart{
+.DsMob .MuiInputBase-adornedEnd.MuiInputBase-adornedStart{
 	height: 44px;
 }
 /* end mobile css */

@@ -258,7 +258,7 @@ const RegisterPage = (props) => {
     savePassResult={savePassResult}
   // sucmsg = {sucmsg}
   />
-    <div className="mob-auth-container">
+    <div className="mob-auth-container DsMob">
       <h2 className="mob-title">Sign Up</h2>
       <h3 className="mob-auth-title">Welcome To 'Live Order'</h3>
       <h5 className="mob-auth-subtitle">

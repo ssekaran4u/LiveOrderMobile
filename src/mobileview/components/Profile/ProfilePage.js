@@ -116,7 +116,7 @@ const ProfilePage = (props) => {
         c_area_name={inputs.c_area_name}
         c_landmark={inputs.c_landmark}
       />
-      <div className="mob-profile-sec-space">
+      <div className="mob-profile-sec-space DsMob">
         <List
           component="nav"
           aria-labelledby="nested-list-subheader"

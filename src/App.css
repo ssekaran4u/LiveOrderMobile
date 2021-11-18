@@ -11341,12 +11341,9 @@ ul li::before {
 }
 
 .orders-icon-container img {
-  background-color: #93a4b8;
-  border-radius: 8%;
-  opacity: 30%;
-  padding: 4px;
   margin-right: 8px;
   float: right;
+  opacity: 70%;
 }
 
 .orders-icon-container1 {
@@ -11394,13 +11391,11 @@ ul li::before {
 
 .shortbook-container img {
   width: 24px;
-  border-radius: 4px;
-  padding: 4px;
-  opacity: 50%;
+  padding: 2px;
+  opacity: 70%;
   position: relative;
   top: 16px;
   right: 10px;
-  background-color: #dbdbdb;
   height: 32px;
 }
 
@@ -11574,8 +11569,8 @@ ul li::before {
   width: 16px;
   height: 16px;
   position: relative;
-  top: -6px;
-  left: 0;
+  top: -8px;
+  left: 16px;
   margin-left: -12px;
 }
 
@@ -11692,3 +11687,199 @@ ul li::before {
 }
 
 /* -------------Shortbook Css----------------- */
+
+/* --------------Shortbook seller option Css-------- */
+
+.shortbook-seller-option{
+  margin-top: 80px;
+  padding: 8px;
+}
+
+.shortbook-seller-option-title h4{
+  font-size: 16px;
+  font-family: 'Quicksand-Medium';
+  color: var(--marine-blue);
+}
+
+.shortbook-seller-option-title p{
+  font-size: 12px;
+  margin-top: 4px;
+  font-family: 'OpenSans-Regular';
+  color: #5b636a;
+}
+
+.shortbook-seller-option-title{
+  border-bottom: 1px dashed #dbdbdb;
+  padding-bottom: 12px;
+}
+
+.shortbook-seller-option button:first-child{
+  width: 56px;
+  height: 4px;
+  color: #c3cde4;
+  border: none;
+  position: relative;
+  left: 18vh;
+  margin: 16px 0px;
+}
+
+.seller-option-list-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seller-option-list-flex button{
+  background-color: #2ec4b6;
+  color: #ffffff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.seller-option-list-flex .mob-pro-drugcount{
+  margin-left: 72px;
+}
+
+.seller-option-list{
+  border-bottom: 1px dashed #dbdbdb;
+  padding-bottom: 12px;
+}
+
+.seller-option-list p{
+  font-family: 'Quicksand-Medium';
+  font-size: 12px;
+  color: #5b636a;
+  margin-top: 16px;
+}
+
+.seller-option-list-flex li{
+  font-size: 12px;
+  font-family: 'OpenSans-Regular';
+  color: #0d1321;
+  margin-top: 4px;
+}
+
+/* --------------Shortbook seller option Css------------------------- */
+/* --------------Shortbook seller option Css------------------------- */
+
+.plp-mrp2{
+  font-size: 10px !important;
+  color: #0d1321 !important;
+  font-family: 'Quicksand-Regular' !important;
+  margin-top: 4px !important;
+  margin-left: 8px !important;
+  font-weight: 600 !important;
+}
+
+.watchlist-productTitle2{
+  font-family: 'Quicksand-Medium' !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  padding-left: 8px;
+  color: #0d1321;
+}
+
+/* --------------Shortbook seller option Css------------------------- */
+
+/* -----------------PLP Filter option css------------------- */
+
+.plp-filter-option-header{
+  border-bottom: 1px dashed #dbdbdb;
+  margin: 16px 12px 0 16px;
+  padding: 16px;
+}
+
+.plp-filter-option-header p{
+  font-family: 'OpenSans-Regular';
+  font-size: 12px;
+  color: #5b636a;
+  margin-top: 4px;
+}
+
+.plp-filter-option-header-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plp-filter-option-header-flex h4{
+  font-size: 16px;
+  font-family: 'Quicksand-Medium';
+  color: var(--marine-blue);
+  font-weight: 600;
+}
+
+.plp-filter-option-header-flex p{
+  font-size: 12px;
+  font-family: 'Quicksand-Medium';
+  color: var(--purpleish-blue);
+}
+
+.mob-filter-option-search-container{
+  border: 1px solid #dbdbdb;
+  margin-top: 16px;
+  margin-left: 12px;
+  width: 204px;
+  border-radius: 6px;
+}
+
+.mob-filter-option-search-container img {
+  width: 12px;
+  height: 12px;
+  margin: 12px 12px 6px;
+}
+
+.mob-filter-option-search-container  input[type="text"]{
+  width: 128px;
+  border: none;
+  font-size: 10px;
+  color: #7a8186;
+  position: relative;
+  top: -10px;
+  font-family: 'Quicksand-Regular';
+}
+
+.plp-filter-option-manufacturers-list input[type="checkbox"]{
+  width: 24px;
+  height: 24px;
+  margin: 12px 12px 12px 0px;
+}
+
+.plp-filter-option-close-btn{
+  padding: 12px 16px;
+  width: 144px;
+  height: 44px;
+  background: #fff;
+  opacity: 50%;
+  margin-left: 16px;
+  border-radius: 6px;
+  color: #5b636a;
+  border: 1px solid #dbdbdb;
+  font-size: 14px;
+  font-family: 'Quicksand-Medium';
+}
+
+.plp-filter-option-apply-btn{
+  padding: 12px 16px;
+  width: 144px;
+  height: 44px;
+  background: #c3cde4;
+  opacity: 50%;
+  margin-right: 16px;
+  border-radius: 6px;
+  color: #fff;
+  border: 1px solid #dbdbdb;
+  font-size: 14px;
+  font-family: 'Quicksand-Medium';
+}
+
+.plp-filter-option-btn-flex{
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+}
+
+
+/* -----------------PLP Filter option css------------------- */

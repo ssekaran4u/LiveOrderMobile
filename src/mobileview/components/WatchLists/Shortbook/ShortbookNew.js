@@ -5,6 +5,7 @@ import MoreVertTwoToneIcon from '@mui/icons-material/MoreVertTwoTone';
 import { makeStyles } from '@mui/styles';
 
 import ShortbookMoreOption from './ShortbookMoreOption';
+import SellerOption from './SellerOption'
 
 //Images
 import ProductImg1 from "../../../../assets/mobImages/item1.png";
@@ -115,6 +116,7 @@ function ShortbookNew() {
                     </Grid>
                 </Grid>
                 {/* <ShortbookMoreOption /> */}
+                {/* <SellerOption /> */}
         </>
     )
 }

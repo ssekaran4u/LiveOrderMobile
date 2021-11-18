@@ -31,7 +31,7 @@ function ShortbookPage() {
 
     return (
         <>
-            {/* <Box sx={{
+            <Box sx={{
                     display : 'flex',
                     justifyContent: 'space-between',
                     marginTop: '16px',
@@ -42,9 +42,9 @@ function ShortbookPage() {
                     <Typography variant='h6' className="shortbook-page-title">My Shortbook List</Typography>
                     <MoreVertTwoToneIcon />
                 </Box>
-                <div className="orders-popUp">
+                {/* <div className="orders-popUp">
                     <h6>Refort 200ml Syrup Added In Wishlist</h6>
-                </div>
+                </div> */}
                 <Grid container spacing={2}>
                     <Grid item xs={6} spacing={2} >
                         <div className={classess.spacing}>
@@ -113,8 +113,8 @@ function ShortbookPage() {
                             </div>
                         </div>
                     </Grid>
-                </Grid> */}
-                <ShortbookNew />
+                </Grid>
+                {/* <ShortbookNew /> */}
         </>
     )
 }

@@ -42,7 +42,6 @@ import {
   BranchPageContainer,
   SplashScreenPageContainer,
   PageNotFoundContainer,
-  ShortbookPageContainer,
   // LoginPageContainer,
   WatchListsPageContainer
 } from "../mobileview/components";
@@ -202,7 +201,7 @@ function MobileRouter() {
         <PrivateRoute
           path="/watchlist"
           Component={WatchListsPageContainer}
-          pageTitle="watchlists"
+          pageTitle="Shortbook"
           subTitle="watchlists | 60 Items"
           backArrow={true}
           edit={false}
@@ -385,13 +384,6 @@ function MobileRouter() {
           pageTitle="Page Not Found"
           headerList={true}
           Layout={PageNotFoundLayout}
-          homeFooter={true}
-        />
-        <PrivateRoute
-          path="/shortbook"
-          Component={ShortbookPageContainer}
-          pageTitle="shortbook"
-          headerList={true}
           homeFooter={true}
         />
 

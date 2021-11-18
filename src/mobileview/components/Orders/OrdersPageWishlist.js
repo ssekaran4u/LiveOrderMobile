@@ -39,7 +39,7 @@ function Orders() {
                     fontSize: '12px',
                     color: '#2e3e6a',
                     }}>
-                    <Typography variant='h6'>Frequently Ordered/Smart Order</Typography>
+                    <Typography variant='h6' className="shortbook-page-title">Frequently Ordered/Smart Order</Typography>
                     <SearchIcon className="mob-watchlist-search-icon" />
                 </Box>
                 <div className="orders-popUp">

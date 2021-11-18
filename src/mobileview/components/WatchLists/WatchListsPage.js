@@ -35,7 +35,7 @@ function WatchListsPage() {
 
     return ( 
         <Container>
-                {/* <Box sx={{
+                <Box sx={{
                     display : 'flex',
                     justifyContent: 'space-between',
                     marginTop: '16px',
@@ -114,12 +114,12 @@ function WatchListsPage() {
                             </div>
                         </div>
                     </Grid>
-                </Grid> */}
+                </Grid>
                 {/* <WatchListSearch /> */}
                 {/* <WatchListOption /> */}
                 {/* <WatchListViewOnProduct /> */}
                 {/* <WatchListItemRemoved /> */}
-                <ShortbookPage />
+                {/* <ShortbookPage /> */}
         </Container>
     )
 }

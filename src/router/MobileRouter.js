@@ -201,7 +201,7 @@ function MobileRouter() {
         <PrivateRoute
           path="/watchlist"
           Component={WatchListsPageContainer}
-          pageTitle="Shortbook"
+          pageTitle="Watchlist"
           subTitle="watchlists | 60 Items"
           backArrow={true}
           edit={false}

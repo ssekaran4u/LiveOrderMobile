@@ -58,7 +58,7 @@ const ProfileInfo = (props) => {
         <ImageView open={openImgViewD1} handleClose={()=> setOpenImgViewD1(false)} imgUrl={inputs.c_druglicense_no1_img} />
         <ImageView open={openImgViewD2} handleClose={()=> setOpenImgViewD2(false)} imgUrl={inputs.c_druglicense_no2_img} />
         <ImageView open={openImgViewNN} handleClose={()=> setOpenImgViewNN(false)} imgUrl={inputs.c_narcotic_no_img} />
-        <div className="mob-profile-sec-space">
+        <div className="mob-profile-sec-space DsMob">
             <form>
                 <h4 className="mob-profile-info-title">Store Information</h4>
                 <p className="login-error-msg min-height-none mb-10">{errMsg}</p>
@@ -122,7 +122,7 @@ const ProfileInfo = (props) => {
                 />
                 <h4 className="mob-profile-info-title">Business Information<AddIcon className="add-icon" /></h4>
                 <h4 className="mob-profile-sub-title">Firm legal Identities</h4>
-                <h4 className="mob-profile-sub-title2">Add License no.1</h4>
+                <h4 className="mob-profile-sub-title2-title">Add License no.1</h4>
                 <TextField
                   name="c_druglicense_no1"
                   disabled={false}

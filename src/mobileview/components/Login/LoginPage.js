@@ -274,7 +274,7 @@ const LoginPage = (props) => {
   return (
     <>
       {/* {toHome ? <Redirect to="/home" /> : null} */}
-      <div className="mob-auth-container">
+      <div className="mob-auth-container DsMob">
         <h2 className="mob-title">Log in</h2>
         <h3 className="mob-auth-title">Welcome To 'Live Order'</h3>
         <h5 className="mob-auth-subtitle">

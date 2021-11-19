@@ -33,7 +33,7 @@ const ContactInfo = (props) => {
   const {inputs, errors, handleInputChange, handleBlur,handleSearchChange, handleSearchOnChange,cityList,areaList,errMsg} = props;
 
     return (
-        <div className="mob-profile-sec-space">
+        <div className="mob-profile-sec-space DsMob">
             <form>
             <p className="login-error-msg min-height-none mb-10">{errMsg}</p>
 
@@ -138,7 +138,7 @@ const ContactInfo = (props) => {
                   autoComplete="new-password"
                   margin="normal"
                   variant="outlined"
-                  className="auth-input mob-input auth-input mob-input"
+                  className="auth-input mob-input"
                   placeholder="State"
                   InputProps={{
                     startAdornment: (
@@ -166,7 +166,7 @@ const ContactInfo = (props) => {
                       margin="normal"
                       variant="outlined"
                       placeholder="City *"
-                      className="auth-input mob-input"
+                      className="auth-input mob-input DsMob"
                       inputProps={{
                         ...params.inputProps,
                         autoComplete: 'new-password',
@@ -192,7 +192,7 @@ const ContactInfo = (props) => {
                       margin="normal"
                       variant="outlined"
                       placeholder="Area *"
-                      className="auth-input mob-input"
+                      className="auth-input mob-input DsMob"
                       inputProps={{
                         ...params.inputProps,
                         autoComplete: 'new-password',

@@ -171,7 +171,7 @@ const ForgotPassPage = (props) => {
 
 
   return (
-    <div className="mob-auth-container">
+    <div className="mob-auth-container DsMob">
       <h2 className="mob-title">Forgot Password ?</h2>
       <h3 className="mob-forgot-title">
         Just Verify Your Relationship or c_mobile_no Number Code to set new password

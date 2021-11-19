@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 import { Container, Box, Typography, Divider } from '@material-ui/core'
 import SearchIcon from '@mui/icons-material/Search';
 import { makeStyles } from '@mui/styles';
-
+import ImportExportIcon from '@mui/icons-material/ImportExport'
+import filter from "../../../assets/mobImages/filter-black/filter.png"
+import Dot from "../../../assets/mobImages/dot.png"
+import Modal from "react-modal"
 
 //images
 import SliderImg from "../../../assets/images/home-slider-img.jpg";
@@ -75,6 +78,16 @@ console.log( match.params)
     }
   ]
   const [openDrawer, setOpenDrawer] = React.useState(false);
+  const [ sortPopUp, setSortPopUp] = React.useState(false);
+  const [ modalOpen, setModalOpen ] = React.useState(false);
+
+  const TogglingSortPopUp = () => {
+    sortPopUp ? setSortPopUp(false) : setSortPopUp(true)
+  }
+
+  const SettingModalOpen = () => {
+    setModalOpen(!modalOpen)
+  }
 
   const toggleDrawer = (open) => (
     event,
@@ -97,6 +110,17 @@ console.log( match.params)
         padding: '12px 0px'
     }
   })
+
+  const customStyles = {
+    content : {
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: '#fff',
+      padding: 0
+    }
+  }
   
   const classess = useStyles();
 
@@ -190,120 +214,139 @@ console.log( match.params)
 //       </Grid>
 //     </div>
   
-  // <Container>
-  //         <Box sx={{
-  //             display : 'flex',
-  //             justifyContent: 'space-between',
-  //             marginTop: '16px',
-  //             fontFamily: 'Quicksand-Medium',
-  //             fontSize: '12px',
-  //             color: '#2e3e6a',
-  //             }}>
-  //         </Box>
-  //         <Grid container spacing={2}>
-  //             <Grid item xs={6} spacing={1}>
-  //                 <div className={classess.spacing}>
-  //                 <div className="orders-icon-container1">
-  //                         <img src={shopping} alt="discount" />
-  //                         <img src={wishlist} alt="fav" />
-  //                     </div>
-  //                         <img src={Item1} alt="img1" className="watchlist-image"/>
-  //                         <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Refort 200ml Syrup</Typography>
-  //                         <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
-  //                         <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
-  //                         <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
-  //                         <div className="shortbook-container">
-  //                         <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-  //                             <img src={shortbook} alt="shortbook"/>
-  //                         </div>
-  //                 </div>    
-  //             </Grid>
-  //             <Grid item xs={6}>
-  //                 <div className={classess.spacing}>
-  //                     <div className="orders-icon-container">
-  //                         <img src={wishlist} alt="fav" />
-  //                     </div> 
-  //                     <img src={Item2} alt="img1" className="watchlist-image"/>
-  //                     <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Cremaffin Plus Syrup</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
-  //                     <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
-  //                     <div className="shortbook-container">
-  //                     <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-  //                         <img src={shortbook} alt="shortbook"/>
-  //                     </div>
-  //                 </div>
-  //             </Grid>
-  //             <Grid item xs={6}>
-  //                 <div className={classess.spacing}>
-  //                     <div className="orders-icon-container">
-  //                         <img src={wishlist} alt="fav" />
-  //                     </div> 
-  //                     <img src={Item3} alt="img1" className="watchlist-image"/>
-  //                     <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">ChildLife Cough Syrup</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
-  //                     <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
-  //                     <div className="shortbook-container">
-  //                     <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-  //                         <img src={shortbook} alt="shortbook"/>
-  //                     </div>
-  //                 </div>                   
-  //             </Grid>
-  //             <Grid item xs={6}>
-  //                 <div className={classess.spacing}>
-  //                     <div className="orders-icon-container">
-  //                         <img src={wishlist} alt="fav" />
-  //                     </div> 
-  //                     <img src={Item5} alt="img1" className="watchlist-image"/>
-  //                     <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Vasu Step Syrup</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
-  //                     <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
-  //                     <div className="shortbook-container">
-  //                     <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-  //                         <img src={shortbook} alt="shortbook"/>
-  //                     </div>
-  //                 </div>
-  //             </Grid>
-  //             <Grid item xs={6} className="half-grid">
-  //                 <div className={classess.spacing}>
-  //                     <div className="orders-icon-container">
-  //                         <img src={wishlist} alt="fav" />
-  //                     </div> 
-  //                     <img src={Item6} alt="img1" className="watchlist-image"/>
-  //                     <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Vasu Step Syrup</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
-  //                     <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
-  //                     <div className="shortbook-container">
-  //                     <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-  //                         <img src={shortbook} alt="shortbook"/>
-  //                     </div>
-  //                 </div>
-  //             </Grid>
-  //             <Grid item xs={6} className="half-grid">
-  //                 <div className={classess.spacing}>
-  //                     <div className="orders-icon-container">
-  //                         <img src={wishlist} alt="fav" />
-  //                     </div> 
-  //                     <img src={Item4} alt="img1" className="watchlist-image"/>
-  //                     <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Vasu Step Syrup</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
-  //                     <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
-  //                     <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
-  //                     <div className="shortbook-container">
-  //                     <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-  //                         <img src={shortbook} alt="shortbook"/>
-  //                     </div>
-  //                 </div>
-  //             </Grid>
-  //         </Grid>
-  //         {/* <BottomContainer /> */}
-  //         {/* <SortOption /> */}
-              // <ProductVarients />
-  // </Container>
-    <FilterOption />
+  <Container>
+          <Box sx={{
+              display : 'flex',
+              justifyContent: 'space-between',
+              marginTop: '16px',
+              fontFamily: 'Quicksand-Medium',
+              fontSize: '12px',
+              color: '#2e3e6a',
+              }}>
+          </Box>
+          {/* { filterPopUp ? <FilterOption /> : null} */}
+          <Grid container spacing={2}>
+              <Grid item xs={6} spacing={1}>
+                  <div className={classess.spacing}>
+                  <div className="orders-icon-container1">
+                          <img src={shopping} alt="discount" />
+                          <img src={wishlist} alt="fav" />
+                      </div>
+                          <img src={Item1} alt="img1" className="watchlist-image"/>
+                          <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Refort 200ml Syrup</Typography>
+                          <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
+                          <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
+                          <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
+                          <div className="shortbook-container">
+                          <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
+                              <img src={shortbook} alt="shortbook"/>
+                          </div>
+                  </div>    
+              </Grid>
+              <Grid item xs={6}>
+                  <div className={classess.spacing}>
+                      <div className="orders-icon-container">
+                          <img src={wishlist} alt="fav" />
+                      </div> 
+                      <img src={Item2} alt="img1" className="watchlist-image"/>
+                      <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Cremaffin Plus Syrup</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
+                      <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
+                      <div className="shortbook-container">
+                      <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
+                          <img src={shortbook} alt="shortbook"/>
+                      </div>
+                  </div>
+              </Grid>
+              <Grid item xs={6}>
+                  <div className={classess.spacing}>
+                      <div className="orders-icon-container">
+                          <img src={wishlist} alt="fav" />
+                      </div> 
+                      <img src={Item3} alt="img1" className="watchlist-image"/>
+                      <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">ChildLife Cough Syrup</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
+                      <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
+                      <div className="shortbook-container">
+                      <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
+                          <img src={shortbook} alt="shortbook"/>
+                      </div>
+                  </div>                   
+              </Grid>
+              <Grid item xs={6}>
+                  <div className={classess.spacing}>
+                      <div className="orders-icon-container">
+                          <img src={wishlist} alt="fav" />
+                      </div> 
+                      <img src={Item5} alt="img1" className="watchlist-image"/>
+                      <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Vasu Step Syrup</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
+                      <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
+                      <div className="shortbook-container">
+                      <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
+                          <img src={shortbook} alt="shortbook"/>
+                      </div>
+                  </div>
+              </Grid>
+              <Grid item xs={6} className="half-grid">
+                  <div className={classess.spacing}>
+                      <div className="orders-icon-container">
+                          <img src={wishlist} alt="fav" />
+                      </div> 
+                      <img src={Item6} alt="img1" className="watchlist-image"/>
+                      <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Vasu Step Syrup</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
+                      <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
+                      <div className="shortbook-container">
+                      <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
+                          <img src={shortbook} alt="shortbook"/>
+                      </div>
+                  </div>
+              </Grid>
+              <Grid item xs={6} className="half-grid">
+                  <div className={classess.spacing}>
+                      <div className="orders-icon-container">
+                          <img src={wishlist} alt="fav" />
+                      </div> 
+                      <img src={Item4} alt="img1" className="watchlist-image"/>
+                      <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Vasu Step Syrup</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
+                      <Typography variant='subtitle2' className="plp-mrp">MRP ₹80.00</Typography>
+                      <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
+                      <div className="shortbook-container">
+                      <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
+                          <img src={shortbook} alt="shortbook"/>
+                      </div>
+                  </div>
+              </Grid>
+          </Grid>
+          <div className="plp-bottom-container">
+            <div className="plp-sort-container">
+              <ImportExportIcon />
+              <h6 onClick = {TogglingSortPopUp}>Sort</h6>
+              { sortPopUp ? <SortOption />: null }
+            </div>
+            <Divider orientation="vertical" flexItem sx={{ 
+              height: '24px',
+              marginTop: '8px',
+              marginBottom: '8px',
+              marginLeft: '4px'
+              }}/>
+            <div className="plp-filter-container">
+              <img src={filter} alt="filter-icon" />
+              <h6 onClick = {SettingModalOpen}>Filter</h6>
+              <Modal isOpen={modalOpen} style={customStyles}> 
+                <FilterOption open={modalOpen} onOpen={setModalOpen}/>
+              </Modal>
+              <img src={Dot} alt="dot-icon" className="dot-icon"/>
+            </div>
+          </div>
+       {/* // <ProductVarients /> */}
+</Container>
   
   )
 }

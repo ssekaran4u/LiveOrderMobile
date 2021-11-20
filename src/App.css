@@ -11541,7 +11541,7 @@ ul li::before {
 	width: 56px;
 	height: 6px;
 	position: relative;
-	left: 45%;
+	left: 38%;
 	border-radius: 50px;
 	opacity: 20%;
 	margin-top: 12px;
@@ -11830,6 +11830,9 @@ ul li::before {
 .plp-filter-option-container{
 	position: absolute;
 	top: 20vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	background-color: #fff;
 }
 

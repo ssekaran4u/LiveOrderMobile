@@ -342,7 +342,7 @@ console.log( match.params)
               <Modal isOpen={modalOpen} style={customStyles}> 
                 <FilterOption open={modalOpen} onOpen={setModalOpen}/>
               </Modal>
-              <img src={Dot} alt="dot-icon" className="dot-icon"/>
+              {/* <img src={Dot} alt="dot-icon" className="dot-icon"/> */}
             </div>
           </div>
        {/* // <ProductVarients /> */}

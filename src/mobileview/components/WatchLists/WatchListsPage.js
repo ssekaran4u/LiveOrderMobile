@@ -3,6 +3,7 @@ import { Container, Box, Typography, Grid, Button } from '@material-ui/core'
 import SearchIcon from '@mui/icons-material/Search';
 import MoreVertTwoToneIcon from '@mui/icons-material/MoreVertTwoTone';
 import { makeStyles } from '@mui/styles';
+import Modal from 'react-modal';
 
 import WatchListSearch from "./WatchListSearch"
 import WatchListViewOnProduct from './WatchListViewOnProduct';
@@ -18,9 +19,18 @@ import ProductImg3 from "../../../assets/mobImages/item3.png";
 import ProductImg4 from "../../../assets/mobImages/item4.png";
 import shortbook from "../../../assets/mobImages/shortbook-white/shortbook.png"
 import shopping from "../../../assets/mobImages/commerce_and_shopping.svg"
-import WatchListItemRemoved from './WatchListItemRemoved';
 
 function WatchListsPage() {
+
+    const [ modalOpen, setModalOpen] = React.useState(false)
+
+    const ModalOpener = () => {
+        setModalOpen(!modalOpen)
+    }
+
+    const CloseModal = () => {
+        setModalOpen(!modalOpen)
+    }
 
     const useStyles = makeStyles({
         spacing : {
@@ -28,6 +38,14 @@ function WatchListsPage() {
             backgroundColor: '#f4f9f9',
             borderRadius: '4px',
             padding: '12px 0px'
+        },
+        optionOverlay : {
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: '96px',
+            backgroundColor: 'rgba(255, 255, 255, 1)'
         }
     })
 
@@ -51,7 +69,12 @@ function WatchListsPage() {
                         <div className={classess.spacing}>
                             <div className="icon-container">
                                 <img src={shopping} alt="discount" />
-                                <MoreVertTwoToneIcon />
+                                <MoreVertTwoToneIcon onClick={ModalOpener} />
+                                    <Modal isOpen={modalOpen} 
+                                    onRequestClose={()=> setModalOpen(!modalOpen)}
+                                    className={classess.optionOverlay}>
+                                        <WatchListOption />
+                                     </Modal>
                             </div>
                                 <img src={ProductImg1} alt="img1" className="watchlist-image"/>
                                 <Typography variant='subtitle1' className="watchlist-productTitle">Refort200mlSyrup</Typography>
@@ -68,7 +91,7 @@ function WatchListsPage() {
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
-                            <MoreVertTwoToneIcon sx={{float: 'right'}} />
+                            <MoreVertTwoToneIcon sx={{float: 'right'}} onClick={ModalOpener} />
                             <img src={ProductImg2} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' className="watchlist-productTitle">Cremaffin Plus Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
@@ -84,7 +107,7 @@ function WatchListsPage() {
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
-                            <MoreVertTwoToneIcon sx={{float: 'right'}} />
+                            <MoreVertTwoToneIcon sx={{float: 'right'}} onClick={ModalOpener} />
                             <img src={ProductImg3} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' className="watchlist-productTitle">ChildLife Cough Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
@@ -100,7 +123,7 @@ function WatchListsPage() {
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
-                            <MoreVertTwoToneIcon sx={{float: 'right'}} />
+                            <MoreVertTwoToneIcon sx={{float: 'right'}} onClick={ModalOpener} />
                             <img src={ProductImg4} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' className="watchlist-productTitle">Vasu Step Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
@@ -116,9 +139,6 @@ function WatchListsPage() {
                     </Grid>
                 </Grid>
                 {/* <WatchListSearch /> */}
-                {/* <WatchListOption /> */}
-                {/* <WatchListViewOnProduct /> */}
-                {/* <WatchListItemRemoved /> */}
                 {/* <ShortbookPage /> */}
         </Container>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 import ImportExportIcon from '@mui/icons-material/ImportExport'
 import { Divider } from '@mui/material'
 import filter from "../../../assets/mobImages/filter-black/filter.png"
-import Dot from "../../../assets/mobImages/dot.png"
+// import Dot from "../../../assets/mobImages/dot.png"
 
 
 function BottomContainer() {
@@ -21,7 +21,7 @@ function BottomContainer() {
             <div className="plp-filter-container">
               <img src={filter} alt="filter-icon" />
               <h6>Filter</h6>
-              <img src={Dot} alt="dot-icon" className="dot-icon"/>
+              {/* <img src={Dot} alt="dot-icon" className="dot-icon"/> */}
             </div>
           </div>
     )

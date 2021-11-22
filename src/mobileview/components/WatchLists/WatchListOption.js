@@ -34,7 +34,7 @@ function WatchListOption() {
         modalWrapper: {
             backgroundColor: '#272727',
             position: 'absolute',
-            top: '75vh',
+            top: '73vh',
             left: '8vh',
             right: '8vh',
             padding: '20px',
@@ -53,7 +53,15 @@ function WatchListOption() {
             fontSize: '11px',
             textAlign: 'center',
             backgroundColor: '#272727'
-        }
+        },
+        overlay: {
+            backgroundColor: 'rgba(9, 36, 72, 0.54)',
+            position: 'fixed',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+        },
     })
 
     const classess = useStyles();
@@ -66,7 +74,8 @@ function WatchListOption() {
                 <h6 onClick={ProductViewer}>View On Product</h6>
                 <Modal isOpen={modalOpen}
                 onRequestClose={() => setModalOpen(!modalOpen)}
-                className={classess.product}>
+                className={classess.product}
+                overlayClassName={classess.overlay}>
                     <WatchListViewOnProduct />
                 </Modal>
             </div>
@@ -75,6 +84,7 @@ function WatchListOption() {
                 <h6 onClick={RemoveProduct}>Remove From Watchlist</h6>
                 <Modal isOpen={removeModal} className={classess.modalWrapper}
                 onRequestClose={() => setRemoveModal(!removeModal)}
+                overlayClassName={classess.overlay}
                 >
                 <div className={classess.contentWrapper}><p className={classess.content}>Calpol 500mg tablet successfully removed</p></div>
                 </Modal>    

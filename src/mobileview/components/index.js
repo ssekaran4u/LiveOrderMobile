@@ -101,6 +101,9 @@ export * from "./Payment/PaymentPageContainer";
 // Smart Cart
 export * from "./SmartCart/SmartCartPageContainer";
 
+// Shortbook
+export * from "./Shortbook/ShortbookPageContainer";
+
 //Orders
 export * from "./Orders/OrdersPageContainer";
 

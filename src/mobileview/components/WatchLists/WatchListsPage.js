@@ -9,9 +9,6 @@ import WatchListSearch from "./WatchListSearch"
 import WatchListViewOnProduct from './WatchListViewOnProduct';
 import WatchListOption from "./WatchListOption"
 
-//Shortbook
-import ShortbookPage from "./Shortbook/ShortbookPage"
-
 //Images
 import ProductImg1 from "../../../assets/mobImages/item1.png";
 import ProductImg2 from "../../../assets/mobImages/item2.png";
@@ -23,6 +20,7 @@ import shopping from "../../../assets/mobImages/commerce_and_shopping.svg"
 function WatchListsPage() {
 
     const [ modalOpen, setModalOpen] = React.useState(false)
+    const [ searchOpen, setSearchOpen] = React.useState(false)
 
     const ModalOpener = () => {
         setModalOpen(!modalOpen)
@@ -30,6 +28,10 @@ function WatchListsPage() {
 
     const CloseModal = () => {
         setModalOpen(!modalOpen)
+    }
+
+    const TogglingSearch = () => {
+        setSearchOpen(!searchOpen)
     }
 
     const useStyles = makeStyles({
@@ -45,8 +47,21 @@ function WatchListsPage() {
             left: 0,
             right: 0,
             height: '96px',
-            backgroundColor: 'rgba(255, 255, 255, 1)'
-        }
+        },
+        searchOverlay : {
+            position: 'fixed',
+            left: 0,
+            right: 0,
+            bottom: 0
+        },
+        overlay: {
+            backgroundColor: 'rgba(9, 36, 72, 0.54)',
+            position: 'fixed',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+        },
     })
 
     const classess = useStyles();
@@ -62,7 +77,12 @@ function WatchListsPage() {
                     color: '#2e3e6a',
                     }}>
                     <Typography variant='h6' className="shortbook-page-title">All Products</Typography>
-                    <SearchIcon className="mob-watchlist-search-icon" />
+                    <SearchIcon className="mob-watchlist-search-icon" onClick={TogglingSearch} />
+                    <Modal isOpen={searchOpen} onRequestClose={() => setSearchOpen(!searchOpen)}
+                    className={classess.searchOverlay}
+                    overlayClassName={classess.overlay}>
+                        <WatchListSearch />
+                    </Modal>
                 </Box>
                 <Grid container spacing={2}>
                     <Grid item xs={6} spacing={2} >
@@ -72,7 +92,7 @@ function WatchListsPage() {
                                 <MoreVertTwoToneIcon onClick={ModalOpener} />
                                     <Modal isOpen={modalOpen} 
                                     onRequestClose={()=> setModalOpen(!modalOpen)}
-                                    className={classess.optionOverlay}>
+                                    className={classess.optionOverlay} overlayClassName={classess.overlay}>
                                         <WatchListOption />
                                      </Modal>
                             </div>
@@ -139,7 +159,6 @@ function WatchListsPage() {
                     </Grid>
                 </Grid>
                 {/* <WatchListSearch /> */}
-                {/* <ShortbookPage /> */}
         </Container>
     )
 }

@@ -103,9 +103,10 @@
 }
 
 .mob-watchlist-search-container{
-    width: 344px;
     height: 48px;
     background-color: #fbfbfb;
+    position: relative;
+    top: 8px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -114,16 +115,17 @@
 
 .mob-watchlist-search-container img{
     margin-right: 8px;
+    background-color: #fbfbfb;
 }
 
 .mob-watchlist-search-container input[type="text"]{
     padding: 8px 60px 8px 0;
-    margin-left: -32px;
     border: none;
     width: 264px;
     border-radius: 8px;
     font-size: 16px;
-    font-family: 'Quicksand-Medium';
+    background-color: #fbfbfb;
+    font-family: var(--font-quicksand);
 }
 
 /*-----------WatchListSearch CSS----------------------*/

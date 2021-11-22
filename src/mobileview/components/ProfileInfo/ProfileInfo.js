@@ -308,6 +308,7 @@ const ProfileInfo = (props) => {
                 <h4 className="uploaded-image-name" onClick={() => setOpenImgViewNN(true)}>
                   <span>{inputs.c_narcotic_no_img_name}</span>
                 </h4> } */}
+                
                 <div className="mob-profile-sub-title2">
                   <h4 className="mob-profile-sub-title2-title">Add License no.2</h4>
                   <img src={Delete} className="mob-profile-info-delete-icon" alt="delete-icon" />

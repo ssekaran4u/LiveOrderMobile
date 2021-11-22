@@ -43,9 +43,11 @@ import {
   SplashScreenPageContainer,
   PageNotFoundContainer,
   // LoginPageContainer,
-  WatchListsPageContainer
+  ShortbookPageContainer,
+  WatchListsPageContainer,
 } from "../mobileview/components";
 // import {HealthPageContainer} from "../webview/components";
+
 
 import { UserManagementContainer } from "../mobileview/components/ProfileAddUser/UserManagementContainer";
 
@@ -208,6 +210,15 @@ function MobileRouter() {
           add={false}
         />
         <PrivateRoute
+          path="/shortbook"
+          Component={ShortbookPageContainer}
+          pageTitle="Shortbook"
+          subTitle="All Products | 145 Items"
+          backArrow={true}
+          edit={false}
+          add={false}
+        />
+        <PrivateRoute
           path="/profile"
           Component={ProfilePageContainer}
           pageTitle="Profile"
@@ -310,7 +321,7 @@ function MobileRouter() {
           // backArrow={true}
           // edit={false}
           // add={false}
-          homeFooter={true}
+          homeFooter={false}
           currentPage="orders"
           headerList={true}
         />

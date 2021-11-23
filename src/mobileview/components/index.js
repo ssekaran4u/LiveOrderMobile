@@ -89,6 +89,9 @@ export * from "./TopOrderedProducts/PLPPageContainer";
 // Cart
 export * from "./Cart/CartPageContainer";
 
+//Order History
+export * from "./Orders/OrderHistory"
+
 // Add new address
 export * from "./AddNewAddress/AddNewAddressPageContainer";
 

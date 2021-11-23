@@ -88,7 +88,7 @@ function ShortbookNew() {
             backgroundColor : 'rgba( 255, 255, 255, 0.5)'
         },
         sellerOption : {
-            position: 'fixed',
+            position: 'static   ',
             top: '20vh',
             right: 0,
             left: 0,

@@ -11283,11 +11283,11 @@ ul li::before {
 }
 
 .orders-icon-container img {
-  	padding: 2px;
-	background: #93a4b8;
+  	padding: 4px;
+	background-color: rgba(147, 164, 184, 0.14321);
+	border-radius: 8%;
 	margin-right: 8px;
 	float: right;
-	opacity: 30%;
 }
 
 .orders-icon-container1 {
@@ -11297,10 +11297,9 @@ ul li::before {
 }
 
 .orders-icon-container1 img:nth-child(2) {
-	background-color: #93a4b8;
+	background-color: rgba(147, 164, 184, 0.14321);
 	border-radius: 8%;
-	opacity: 30%;
-	padding: 2px;
+	padding: 4px;
 	margin-right: 8px;
 }
 
@@ -11335,9 +11334,8 @@ ul li::before {
 
 .shortbook-container img {
   width: 24px;
-  padding: 2px;
-  opacity: 20%;
-  background-color: #93a4b8;
+  padding: 4px;
+  background-color: rgba(147, 164, 184, 0.14321);
   position: relative;
   top: 16px;
   right: 10px;

@@ -316,12 +316,12 @@ function MobileRouter() {
         <PrivateRoute
           path="/orders"
           Component={OrdersPageContainer}
-          pageTitle="Frequently Ordered"
-          subTitle="All Products | 60 Items"
+          pageTitle="Order History"
+          subTitle=""
           // backArrow={true}
           // edit={false}
           // add={false}
-          homeFooter={false}
+          homeFooter={true}
           currentPage="orders"
           headerList={true}
         />

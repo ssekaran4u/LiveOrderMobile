@@ -1,4 +1,4 @@
-import OrdersPage from "./OrdersPage";
+import OrderHistory from "./OrderHistory"
+import "./OrderStyles.css" 
 
-
-export const OrdersPageContainer = OrdersPage;
+export const OrdersPageContainer = OrderHistory;

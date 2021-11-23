@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { makeStyles } from '@mui/styles';
 import FilterOption from "../TopOrderedProducts/FilterOption"
 import Modal from 'react-modal'
+import SellerOption from '../Shortbook/SellerOption'
 
 //Images
 import ProductImg1 from "../../../assets/mobImages/item1.png";
@@ -20,14 +21,30 @@ import filter from "../../../assets/mobImages/filter-black/filter.png"
 function OrdersPage() {
 
     const[modalOpen, setModalOpen] = React.useState(false)
-    const[ changeImage,setChangeImage] =  React.useState(false)
+    const[addModal, setAddModal] = React.useState(false)
+    const[shortbookModal, setShortbookModal] = React.useState(false)
+    const[sellerModal, setSellerModal] = React.useState(false)
+
 
     const FilterModal =  () => {
-        setModalOpen(!modalOpen)
+        setModalOpen(!modalOpen) 
     }
 
-    const AppendImage = () => {
-        setChangeImage(!changeImage)
+    const AppendImage = (e) => {
+        e.target.setAttribute('src', `${wishlistPurple}`);
+        e.target.setAttribute('alt', 'wishlist-puple');
+        setAddModal(!addModal);
+    }
+
+
+    const ShortbookImage = (e) => {
+        e.target.setAttribute('src', `${shortbookPurple}`);
+        e.target.setAttribute('alt', 'shortbook-puple');
+        setShortbookModal(!shortbookModal)
+    }
+
+    const TogglingSeller = () => {
+        setSellerModal(!sellerModal)
     }
 
     const useStyles = makeStyles({
@@ -36,6 +53,47 @@ function OrdersPage() {
             backgroundColor: '#f4f9f9',
             borderRadius: '4px',
             padding: '12px 0px'
+        },
+        modalWrapper: {
+            backgroundColor: '#272727',
+            position: 'absolute',
+            top: '73vh',
+            left: '8vh',
+            right: '8vh',
+            padding: '20px',
+            border: 'none',
+            borderRadius: '4px'
+        },
+        contentWrapper: {
+            position: 'absolute',
+            top: '10px',
+            left: 0,
+            right: 0,
+        },
+        content: {
+            fontFamily: 'Quicksand-Medium',
+            color: '#fff',
+            fontSize: '11px',
+            textAlign: 'center',
+            backgroundColor: '#272727'
+        },
+        sellerOption : {
+            position: 'static   ',
+            top: '20vh',
+            right: 0,
+            left: 0,
+            bottom: 0,
+            border: '1px solid #dbdbdb',
+            borderRadius: '30px 30px 0 0',
+            padding: '16px',
+        },
+        sellerOptionOverlay : {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.75)'
         }
     })
 
@@ -71,72 +129,83 @@ function OrdersPage() {
                         <div className="orders-icon-container1">
                                 <img src={shopping} alt="discount" />
                                 <img onClick={AppendImage} src={wishlist} alt="fav" />
-                                {/* { changeImage ? <img src={wishlist} alt="fav" /> : <img src={wishlistPurple} alt="fav" />} */}
-                            </div>
+                                <Modal isOpen={addModal} className={classess.modalWrapper}
+                                onRequestClose={() => setAddModal(!addModal)}>
+                                <div className={classess.contentWrapper}><p className={classess.content}>Refort 200ml Syrup Added In Watchlist</p></div>
+                                </Modal>                           
+                         </div>
                                 <img src={ProductImg1} alt="img1" className="watchlist-image"/>
                                 <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Refort 200ml Syrup</Typography>
                                 <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
                                 <Typography variant='subtitle2' className="watchlist-mrp">MRP <p style={{textDecoration: 'line-through', margin: '0'}}>₹00.00</p><span>Scheme 10 + 2</span></Typography>
                                 <Typography variant='subtitle1' className="watchlist-total">₹ 57.00 </Typography>
-                                <Typography variant='body' className="watchlist-seller-name">Pre Seller : <span>Mahaveer Medi...</span> </Typography>
+                                <Typography variant='body' className="watchlist-seller-name">Pre Seller : <span onClick={TogglingSeller}>Mahaveer Medi...</span> </Typography>
+                                <Modal isOpen={sellerModal} onRequestClose={()=>setSellerModal(!sellerModal)} 
+                                className={classess.sellerOption} overlayClassName={classess.sellerOptionOverlay}>
+                                    <SellerOption />
+                                </Modal>
                                 <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
                                 <div className="shortbook-container">
                                 <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-                                    <img src={shortbook} alt="shortbook"/>
+                                    <img onClick={ShortbookImage} src={shortbook} alt="shortbook"/>
+                                    <Modal isOpen={shortbookModal} className={classess.modalWrapper}
+                                    onRequestClose={() => setShortbookModal(!shortbookModal)}>
+                                    <div className={classess.contentWrapper}><p className={classess.content}>Refort 200ml Syrup Added In Shortbook</p></div>
+                                    </Modal>
                                 </div>
                         </div>    
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
                             <div className="orders-icon-container">
-                                <img src={wishlist} alt="fav" />
+                                <img onClick={AppendImage} src={wishlist} alt="fav" />
                             </div> 
                             <img src={ProductImg2} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Cremaffin Plus Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
                             <Typography variant='subtitle2' className="watchlist-mrp">MRP <p style={{textDecoration: 'line-through', margin: '0'}}>₹00.00</p><span>Scheme 10 + 2</span></Typography>
                             <Typography variant='subtitle1' className="watchlist-total">₹ 57.00 </Typography>
-                            <Typography variant='body' className="watchlist-seller-name">Pre Seller : <span>Mahaveer Medi...</span> </Typography>
+                            <Typography variant='body' className="watchlist-seller-name">Pre Seller : <span onClick={TogglingSeller}>Mahaveer Medi...</span> </Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
                             <div className="shortbook-container">
                             <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-                                <img src={shortbook} alt="shortbook"/>
+                                <img onClick={ShortbookImage} src={shortbook} alt="shortbook"/>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
                             <div className="orders-icon-container">
-                                <img src={wishlist} alt="fav" />
+                                <img onClick={AppendImage} src={wishlist} alt="fav" />
                             </div> 
                             <img src={ProductImg3} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">ChildLife Cough Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
                             <Typography variant='subtitle2' className="watchlist-mrp">MRP <p style={{textDecoration: 'line-through', margin: '0'}}>₹00.00</p><span>Scheme 10 + 2</span></Typography>
                             <Typography variant='subtitle1' className="watchlist-total">₹ 57.00 </Typography>
-                            <Typography variant='body' className="watchlist-seller-name">Pre Seller : <span>Mahaveer Medi...</span> </Typography>
+                            <Typography variant='body' className="watchlist-seller-name">Pre Seller : <span onClick={TogglingSeller}>Mahaveer Medi...</span> </Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
                             <div className="shortbook-container">
                             <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-                                <img src={shortbook} alt="shortbook"/>
+                                <img onClick={ShortbookImage} src={shortbook} alt="shortbook"/>
                             </div>
                         </div>                   
                     </Grid>
                     <Grid item xs={6}>
                         <div className={classess.spacing}>
                             <div className="orders-icon-container">
-                                <img src={wishlist} alt="fav" />
+                                <img onClick={AppendImage} src={wishlist} alt="fav" />
                             </div> 
                             <img src={ProductImg4} alt="img1" className="watchlist-image"/>
                             <Typography variant='subtitle1' sx={{fontSize: "12px"}} className="watchlist-productTitle">Vasu Step Syrup</Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Pack Size 100ml</Typography>
                             <Typography variant='subtitle2' className="watchlist-mrp">MRP <p style={{textDecoration: 'line-through', margin: '0'}}>₹00.00</p><span>Scheme 10 + 2</span></Typography>
                             <Typography variant='subtitle1' className="watchlist-total">₹ 57.00 </Typography>
-                            <Typography variant='body' className="watchlist-seller-name">Pre Seller : <span>Mahaveer Medi...</span> </Typography>
+                            <Typography variant='body' className="watchlist-seller-name">Pre Seller : <span onClick={TogglingSeller}>Mahaveer Medi...</span> </Typography>
                             <Typography variant='body' className="watchlist-sub-heading">Contains : <span>Sodium picosul...</span> </Typography>
                             <div className="shortbook-container">
                             <Button variant="contained" style={{backgroundColor: '#00d3b4', color: '#fff', marginTop: '12px', marginLeft: '8px', padding: '8px'}}>Add To Cart</Button>
-                                <img src={shortbook} alt="shortbook"/>
+                                <img onClick={ShortbookImage} src={shortbook} alt="shortbook"/>
                             </div>
                         </div>
                     </Grid>

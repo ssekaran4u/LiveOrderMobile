@@ -45,10 +45,29 @@ body{
     color: #0d1321;
 }
 
+.shop-details-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: -8px;
+    line-height: 20px;
+    position: relative;
+    bottom: 24px;
+}
+
 .logo-flex{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.logo-flex img{
+    position: relative;
+    bottom: 8px;
+    background-color: rgba(35, 63, 140, 0.1);
+    border-radius: 10px;
+    margin-right: 12px;
+    margin-top: 24px;
 }
 
 .view-btn{
@@ -58,5 +77,215 @@ body{
     border-radius: 24px;
     background-color: #f7f6ff;
     position: relative;
+    right: 6px;
     bottom: 18px;
+}
+
+.grid-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 44px;
+    margin-left: -4px;
+}
+
+.grid-header h4{
+    font-size: 14px;
+    color: #002f4f;
+    font-family: var(--font-quicksand);
+}
+
+.grid-header h5{
+    font-size: 14px;
+    color: #0d1321;
+    font-family: var(--font-quicksand);
+    font-weight: 500;
+}
+
+.grid-sub-header h4{
+    font-size: 12px;
+    font-family: var(--font-quicksand);
+    color: rgba(13, 19, 33, 0.5);
+    font-weight: 500;
+    margin-top: 4px;
+    margin-left: -4px;
+}
+
+.grid-sub-header h4:nth-child(2){
+    font-size: 12px;
+    font-family: var(--font-quicksand);
+    color: rgba(13, 19, 33, 0.6);
+    font-weight: 500;
+    margin-top: 4px;
+    margin-left: -4px;
+}
+
+.span-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.span-flex h4{
+    font-size: 12px;
+    font-family: var(--font-quicksand);
+    color: rgba(13, 19, 33, 0.6);
+    margin-left: -4px;
+    font-weight: 500;
+}
+
+.span-flex .span1{
+    font-size: 12px;
+    font-family: var(--font-quicksand);
+    color: rgb(13, 19, 33);
+    font-weight: 600;
+}
+.span-flex .span2{
+    font-size: 12px;
+    font-family: var(--font-quicksand);
+    color: #002f4f;
+    font-weight: 600;
+}
+.span-flex .span3{
+    font-size: 12px;
+    font-family: var(--font-quicksand);
+    color: #c33c54;
+    font-weight: 600;
+}
+
+.shop-header {
+    width: 344px;
+    height: 48px;
+    background-color: rgba(236, 232, 254, 0.2);
+    padding: 12px;
+}
+
+.shop-header h4{
+    font-size: 14px;
+    font-family: var(--font-quicksand);
+    color: #0d1321;
+}
+
+.shop-header span{
+    color: #6e717a;
+    font-size: 14px;
+    font-family: var(--font-quicksand);
+}
+
+.order-tracking .order-dot{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+}
+
+.order-tracking .order-inner-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    background-color: aqua;
+}
+
+.order-tracking .order-inner-dot2{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    background-color: #f8f8f8;
+}
+
+.order-line{
+    width: 4px;
+    height: 48px;
+    position: relative;
+    left: 6px;
+    background-color: aquamarine;
+}
+
+.order-styles-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.order-styles-flex h6 {
+    font-size: 12px;
+    font-family: var(--font-quicksand);
+    color: #002f4f;
+}
+
+.order-tracking .order-inner2-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    background-color: #002f4f;
+}
+
+.order-tracking .order-inner2-dot2{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    background-color: #f8f8f8;
+}
+
+.order-line2{
+    width: 4px;
+    height: 48px;
+    position: relative;
+    left: 6px;
+    background-color: #f8f8f8;
+}
+
+.order-line2:hover{
+    width: 4px;
+    height: 48px;
+    position: relative;
+    left: 6px;
+    background-color: aqua;
+    transition: background-color 1s ease 0s;
+}
+
+.delivery-date{
+    font-size: 12px;
+    font-family: var(--font-quicksand);
+    color: #ff7b20;
+}
+
+.order-tracking-container{
+    margin-top: 16px;
+}
+
+.modal-for-option{
+    background-color: #fff;
+    padding: 12px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.option-modal-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.option-modal-flex p{
+    font-size: 13px;
+    font-family: var(--font-quicksand);
+    color: #5b636a;
+    margin-left: 8px;
+    font-weight: 600;
 }

@@ -321,7 +321,7 @@ function MobileRouter() {
           // backArrow={true}
           // edit={false}
           // add={false}
-          homeFooter={true}
+          homeFooter={false}
           currentPage="orders"
           headerList={true}
         />

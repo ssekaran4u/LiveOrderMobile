@@ -3,18 +3,32 @@ import {Container, Grid, Divider} from '@material-ui/core'
 import MoreVertTwoToneIcon from '@mui/icons-material/MoreVertTwoTone';
 import Modal from 'react-modal'
 import { makeStyles } from '@mui/styles';
+import ItemDetails from './ItemDetails'
 
 //Images
 import MahaveerLogo from "../../../assets/images/mahaveer.png"
 import Filter from "../../../assets/mobImages/path_2650.png"
 import Calendar from "../../../assets/images/calendar.svg"
+import Download from "../../../assets/images/download.svg"
+import Excel from "../../../assets/images/excel.svg"
+import Pdf from "../../../assets/images/pdf.svg"
 
 function OrderHistory() {
 
     const[ optionModal, setOptionModal] = React.useState(false)
+    const[ downloadModal, setDownloadModal] = React.useState(false)
+    const[ itemModal, setItemModal] = React.useState(false)
 
     const TogglingModal = () => {
         setOptionModal(!optionModal)
+    }
+
+    const TogglingDownload = () => {
+        setDownloadModal(!downloadModal)
+    }
+
+    const TogglingItemDetail = () => {
+        setItemModal(!itemModal)
     }
 
     const useStyles = makeStyles({
@@ -32,7 +46,32 @@ function OrderHistory() {
             left: 0,
             right: 0,
             backgroundColor: '#fff'
-        }
+        },
+        Overlay: {
+            position: 'fixed',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0
+        },
+        downloadOption : {
+            position: 'absolute',
+            top: '55vh',
+            left: '10vh',
+            right: '32px',
+            backgroundColor: '#fff',
+            borderRadius: '8px',
+            border: '1px solid ##c3cde4',
+            boxShadow: '0px 5px 20px 0px #000',
+        },
+        item: {
+            position: 'absolute',
+            top: '2px',
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: '#fff'
+        },
     })
 
     const classess = useStyles()
@@ -40,10 +79,6 @@ function OrderHistory() {
     return (
         <Container>
             <div>
-                {/* <div className="header-flex">
-                    <h4>All Orders</h4>
-                    <h4>Frequently Ordered / Smart Order</h4>
-                </div> */}
                 <div className="header2-flex">
                     <h4>Last 6 Months Order</h4>
                     <MoreVertTwoToneIcon sx={{ position: 'relative', left: '12px'}} onClick={TogglingModal} />
@@ -66,7 +101,10 @@ function OrderHistory() {
                     <Grid item xs={4}>
                         <div className="logo-flex">
                             <img src={MahaveerLogo} alt="logo" />
-                            <button className="view-btn">View</button>
+                            <button className="view-btn" onClick={TogglingItemDetail}>View</button>
+                            <Modal isOpen={itemModal} className={classess.item} overlayClassName={classess.Overlay}>
+                                <ItemDetails itemModal={itemModal} onItemModal={setItemModal}/>
+                            </Modal>
                         </div>
                     </Grid>
                     <Grid item xs={8} className="shop-details-flex">
@@ -85,6 +123,17 @@ function OrderHistory() {
                 </Grid>
                 <div className="shop-header">
                     <h4>Ships to Maruthi Medicals <span>(Jayanagar)</span></h4>
+                    <img src={Download} alt="download-icon" onClick={TogglingDownload}/>
+                    <Modal isOpen={downloadModal} onRequestClose={()=> setDownloadModal(!downloadModal)}
+                    className={classess.downloadOption} overlayClassName={classess.Overlay}>
+                        <div className="image-container">
+                            <div><img src={Excel} alt="excel-icon" /><p className="image-text">Excel</p></div>
+                            <Divider orientation="vertical" flexItem />
+                            <div><img src={Pdf} alt="pdf-icon" /><p className="image-text2">PDF</p></div>
+                            <Divider orientation="vertical" flexItem />
+                            <div><img src={Pdf} alt="pdf-icon" /><p className="image-text2">CSV</p></div>
+                        </div>
+                    </Modal>
                 </div>
                 <div className="order-tracking-container">
                     <div className="order-tracking">
@@ -101,24 +150,24 @@ function OrderHistory() {
                     <div className="order-tracking">
                         <div className="order-styles-flex">
                             <div className="order-dot">
-                                <div className="order-inner2-dot">
-                                    <div className="order-inner2-dot2"></div>
+                                <div className="order-inner-dot">
+                                    <div className="order-inner-dot2"></div>
                                 </div>
                             </div>
                             <h6>Processing</h6>    
                         </div>
-                        <div className="order-line2"></div>
+                        <div className="order-line"></div>
                     </div>
                     <div className="order-tracking">
                         <div className="order-styles-flex">
                             <div className="order-dot">
-                                <div className="order-inner2-dot">
-                                    <div className="order-inner2-dot2"></div>
+                                <div className="order-inner-dot">
+                                    <div className="order-inner-dot2"></div>
                                 </div>
                             </div>
                             <h6>Order Invoiced</h6>    
                         </div>
-                        <div className="order-line2"></div>
+                        <div className="order-line"></div>
                     </div>
                     <div className="order-tracking">
                         <div className="order-styles-flex">
@@ -142,6 +191,8 @@ function OrderHistory() {
                         </div>
                     </div>
                 </div>
+                <button className="pay-btn">PAY OUTSTANDING</button>
+                <button className="re-order-btn">RE-ORDER</button>
             </div>
         </Container>
     )

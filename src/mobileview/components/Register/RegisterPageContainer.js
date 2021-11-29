@@ -15,4 +15,10 @@ const mapDispatchToProps = (dispatch) => ({
     sendOTP: (inputs) => dispatch(SendOTP(inputs)),
     validateREGISTER: (inputs) => dispatch(validateREGISTER(inputs)),
 });
-export const RegisterPageContainer = connect(mapStateToProps, mapDispatchToProps)(RegisterPage);
+
+const RegisterPageContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RegisterPage);
+
+export default RegisterPageContainer

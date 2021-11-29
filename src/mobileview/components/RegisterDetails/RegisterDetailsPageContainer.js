@@ -19,4 +19,10 @@ const mapDispatchToProps = (dispatch) => ({
     AreaListAction: (cityCode) => dispatch(AreaListAction(cityCode)),
     GSTListAction: () => dispatch(GSTListAction())
 });
-export const RegisterDetailsPageContainer = connect(mapStateToProps, mapDispatchToProps)(RegisterDetailsPage);
+
+const RegisterDetailsPageContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RegisterDetailsPage);
+
+export default RegisterDetailsPageContainer

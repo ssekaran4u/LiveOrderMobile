@@ -6,16 +6,16 @@
 export * from "./BuyerRegistration/BuyerRegPageContainer";
 export * from "./BuyerDetails/BDPageContainer";
 
-export * from "./RegisterDetails/RegisterDetailsPageContainer";
-export * from "./Register/RegisterPageContainer";
-export * from "./ForgotPass/ForgotPassPageContainer";
-export * from "./VerifyOtp/VerifyOtpPageContainer";
+// export * from "./RegisterDetails/RegisterDetailsPageContainer";
+// export * from "./Register/RegisterPageContainer";
+// export * from "./ForgotPass/ForgotPassPageContainer";
+// export * from "./VerifyOtp/VerifyOtpPageContainer";
 
 // Splash Screen
 export * from "./SplashScreen/SplashScreenPageContainer";
 
 // Landing
-export * from "./Landing/LandingPageContainer";
+// export * from "./Landing/LandingPageContainer";
 
 //Search
 export * from "./Search/SearchPageContainer";

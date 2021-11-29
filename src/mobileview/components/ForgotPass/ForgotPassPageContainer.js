@@ -2,21 +2,23 @@ import ForgotPassPage from "./ForgotPassPage";
 import { State } from "../../../rootReducer";
 import { SendOTP, SavePassword } from "../../../common/action";
 import { connect } from "react-redux";
-import { ForgotInputEntity } from "../../../common/model";
 
-const mapStateToProps = (state: State) => ({
+const mapStateToProps = (state) => ({
   sendOTPResult: state.sendOTPResult,
   savePassResult: state.savePassResult
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
-  SendOTP: (username: string, page: string) =>
+const mapDispatchToProps = (dispatch) => ({
+  SendOTP: (username, page) =>
     dispatch(SendOTP(username, page)),
-  SavePassword: (inputs: ForgotInputEntity) =>
+  SavePassword: (inputs) =>
     dispatch(SavePassword(inputs))
 });
 
-export const ForgotPassPageContainer = connect(
+
+const ForgotPassPageContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(ForgotPassPage);
+
+export default ForgotPassPageContainer

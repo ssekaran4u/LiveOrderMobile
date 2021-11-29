@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import MobileRouter from "./router/MobileRouter";
 import "./App.css";
+import "./PwAApp.css";
 // import styles from './App.css'
 
 import { Provider } from "react-redux";

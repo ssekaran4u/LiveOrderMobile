@@ -1,0 +1,597 @@
+/* start mobile css */
+.DsMob .MuiOutlinedInput-adornedStart {
+	padding-left: 0;
+}
+.DsMob .MuiInputAdornment-positionStart {
+	margin-right: 0;
+	width: 60px !important;
+	background: #f6f8fd;
+	padding: 13px 0;
+	border-radius: 6px 0 0 6px;
+	line-height: 18px;
+	text-align: center;
+	display: unset;
+	height: 44px !important;
+	min-width: 60px;
+	max-height: 44px;
+}
+.DsMob .auth-input.mob-input .MuiOutlinedInput-input, 
+.DsMob .MuiOutlinedInput-input.MuiInputBase-inputAdornedStart.MuiInputBase-inputAdornedEnd {
+	font-size: 13px;
+	color: #5b636a;
+	font-weight: 500;
+	line-height: 16px;
+	height: 16px;
+	padding: 14px 14px 14px 12px;
+	border-left: 1px solid var(--light-blue-grey);
+	border-radius: revert !important;
+}
+.DsMob .MuiInputBase-adornedEnd.MuiInputBase-adornedStart{
+	height: 44px;
+}
+/* end mobile css */
+/*-----------Orders - Added in shortbook CSS---------------------*/
+
+.orders-page {
+	opacity: 50%;
+	/* background-color: #fff; */
+}
+
+.orders-icon-container img {
+  	padding: 4px;
+	background-color: rgba(147, 164, 184, 0.14321);
+	border-radius: 8%;
+	margin-right: 8px;
+	float: right;
+}
+
+.orders-icon-container1 {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 8px;
+}
+
+.orders-icon-container1 img:nth-child(2) {
+	background-color: rgba(147, 164, 184, 0.14321);
+	border-radius: 8%;
+	padding: 4px;
+	margin-right: 8px;
+}
+
+.shortbook-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.orders-popUp {
+	position: absolute;
+	top: 74%;
+	left: 12%;
+	right: 0;
+	border-radius: 8px;
+	background: black;
+	letter-spacing: 0.22px;
+	text-align: center;
+	width: 260px;
+	height: 40px;
+}
+
+.orders-popUp h6 {
+	font-size: 12px;
+	font-family: var(--font-quicksand);
+	line-height: 12px;
+	display: flex;
+	margin: 12px;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.shortbook-container img {
+  width: 24px;
+  padding: 4px;
+  background-color: rgba(147, 164, 184, 0.14321);
+  position: relative;
+  top: 16px;
+  right: 10px;
+  height: 32px;
+}
+
+.filter-container {
+	height: 44px;
+	margin: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.filter-container h6 {
+	margin-left: 8px;
+	font-family: var(--font-quicksand);
+	font-size: 16px;
+	line-height: 16px;
+	color: var(--marine-blue);
+	opacity: 90%;
+}
+/*-----------Orders - Added in shortbook CSS---------------------*/
+
+/*-----------Cart items CSS---------------------*/
+
+.cart-items-textfield {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mui-btn-shortbook {
+	background-color: white;
+	border: 0.1px solid #f5f3fe;
+	padding: 8px 12px;
+	margin: 12px 0px 0px 0px;
+	border-radius: 4px;
+	font-size: 10px;
+}
+
+.cart-items-textfield img {
+	height: 16px;
+	width: 16px;
+	margin-left: 12px;
+	margin-top: 8px;
+	border: 0.1px solid #f5f3fe;
+	padding: 8px;
+}
+
+/*-----------Cart items CSS---------------------*/
+
+/*-----------Feedback pop up screens CSS---------------------*/
+
+.mob-feedback-store-wrapper {
+	width: 100%;
+	position: absolute;
+	top: 58vh;
+	border: 1px solid;
+	border-radius: 50px 50px 0 0;
+	left: 0%;
+	height: 336px;
+}
+
+.mob-feedback-store-wrapper button {
+	width: 56px;
+	height: 6px;
+	margin-left: 20vh;
+	border-radius: 50px;
+	opacity: 20%;
+	margin-top: 12px;
+}
+
+.mob-feedback-store-header h4 {
+	margin: 16px 0 0 16px;
+	font-family: var(--font-quicksand);
+	font-family: 16px;
+	color: var(--marine-blue);
+}
+
+.mob-feedback-store-header p {
+	margin: 4px 0 0 16px;
+	font-family: var(--font-opensans);
+	font-size: 12px;
+	color: #5b636a;
+}
+
+.mob-feedback-store-header {
+	/* border-bottom: 1px dashed #dbdbdb; */
+	padding-bottom: 12px;
+	position: relative;
+}
+
+.mob-feedback-store-header::after {
+	content: "";
+	height: 0.1px;
+	width: 84%;
+	background: #dbdbdb;
+	position: absolute;
+	left: 16px;
+	bottom: 0;
+}
+
+.mob-feedback-store-list li {
+	/* border-bottom: 0.3px solid #dbdbdb; */
+	padding-bottom: 12px;
+	margin-bottom: 16px;
+	margin-left: -24px;
+	position: relative;
+	font-size: 12px;
+	font-family: var(--font-quicksand);
+	color: #5b636a;
+}
+
+.mob-feedback-store-list li::after {
+	content: "";
+	height: 0.1px;
+	width: 88%;
+	background: #dbdbdb;
+	position: absolute;
+	left: 2px;
+	bottom: 0;
+}
+
+/*-----------Feedback pop up screens CSS---------------------*/
+
+/* -------------PLP container---------------- */
+
+.plp-mrp{
+	font-size: 10px !important;
+	color: var(--marine-blue) !important;
+	font-family: var(--font-quicksand) !important;
+	margin-top: 4px !important;
+	margin-left: 8px !important;
+	font-weight: 600 !important;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.plp-bottom-container{
+	position: sticky;
+	background-color: #fff;
+	bottom: 0;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 48px;
+	margin: 0;
+}
+
+.plp-sort-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.plp-filter-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -16px;
+}
+
+.plp-sort-container h6{
+	font-family: var(--font-quicksand);
+	font-size: 12px;
+	color: var(--marine-blue);
+	margin-left: 4px;
+}
+
+.plp-filter-container h6{
+	font-family: var(--font-quicksand);
+	font-size: 12px;
+	color: var(--marine-blue);
+	margin-left: 4px;
+}
+
+.dot-icon{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -8px;
+  left: 16px;
+  margin-left: -12px;
+}
+
+.plp-sort-by-container{
+	width: 100%;
+	height: 288px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 47px;
+	left: 0;
+}
+
+.plp-sort-by-header{
+	width: 328px;
+	margin-left: 20px;
+	border-bottom: 1px dashed #dbdbdb;
+}
+
+.plp-sort-by-header button{
+	width: 56px;
+	height: 6px;
+	position: relative;
+	left: 38%;
+	border-radius: 50px;
+	opacity: 20%;
+	margin-top: 12px;
+}
+
+.plp-sort-by-header h4{
+	font-size: 16px;
+	font-family: var(--font-quicksand);
+	color: var(--marine-blue);
+	margin: 20px 0 4px 0px;
+}
+
+.plp-sort-by-header p{
+	font-size: 12px;
+	font-family: var(--font-opensans);
+	color: #5b636a;
+	margin-bottom: 12px;
+}
+
+.plp-sort-by-container li:first-child{
+	font-size: 12px;
+	font-family: var(--font-quicksand);
+	color: #5b636a;
+	font-weight: 600;
+	margin-left: 20px;
+	border-bottom: 1px solid #dbdbdb;
+	padding-bottom: 16px;
+	width: 328px;
+}
+
+.plp-sort-by-container li{
+	font-size: 12px;
+	font-family: var(--font-quicksand);
+	color: #5b636a;
+	margin-left: 20px;
+	border-bottom: 1px solid #dbdbdb;
+	padding-bottom: 16px;
+	width: 328px;
+	margin-top: 12px;
+}
+/* -------------PLP container---------------- */
+
+/* -------------Shortbook Css----------------- */
+
+.icon-container-button{
+	color: #dbdbdb;
+	border: none;
+	border-radius: 4px;
+	position: relative;
+	right: 8px;
+	float: right;
+	width: 24px;
+	height: 24px;
+}
+
+.icon-container-button2{
+	color: #dbdbdb;
+	border: none;
+	border-radius: 4px;
+	position: relative;
+	right: 8px;
+	width: 24px;
+	height: 24px;
+	float: right;
+}
+
+.shortbook-page-title{
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	font-family: var(--font-quicksand) !important;
+	color: #2e3e6a !important;
+}
+
+
+.shortbook-more-option-wrapper{
+	width: 100%;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.shortbook-more-option-wrapper li{
+	margin: 12px 12px 12px 8px;
+	font-size: 12px;
+	font-family: var(--font-quicksand);
+	color: #5b636a;
+}
+
+/* -------------Shortbook Css----------------- */
+
+/* --------------Shortbook seller option Css-------- */
+
+.shortbook-seller-option{
+	position: absolute;
+    right: 0;
+    left: 0;
+    top: 20vh;
+    bottom: 0;
+    border: 1px solid #dbdbdb;
+	background-color: #fff;
+    border-radius: 30px 30px 0 0;
+	padding: 16px;
+}
+
+.shortbook-seller-option-title h4{
+  font-size: 16px;
+  font-family: var(--font-quicksand);
+  color: var(--marine-blue);
+}
+
+.shortbook-seller-option-title p{
+  font-size: 12px;
+  margin-top: 4px;
+  font-family: var(--font-opensans);
+  color: #5b636a;
+}
+
+.shortbook-seller-option-title{
+  border-bottom: 1px dashed #dbdbdb;
+  padding-bottom: 12px;
+}
+
+.shortbook-seller-option button:first-child{
+  width: 56px;
+  height: 4px;
+  color: #c3cde4;
+  border: none;
+  position: relative;
+  left: 18vh;
+  margin: 16px 0px;
+}
+
+.seller-option-list-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seller-option-list-flex button{
+  background-color: #2ec4b6;
+  color: #ffffff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.seller-option-list-flex .mob-pro-drugcount{
+  margin-left: 72px;
+}
+
+.seller-option-list{
+  border-bottom: 1px dashed #dbdbdb;
+  padding-bottom: 12px;
+}
+
+.seller-option-list p{
+  font-family: var(--font-quicksand);
+  font-size: 12px;
+  color: #5b636a;
+  margin-top: 16px;
+}
+
+.seller-option-list-flex li{
+  font-size: 12px;
+  font-family: var(--font-opensans);
+  color: #0d1321;
+  margin-top: 4px;
+}
+
+/* --------------Shortbook seller option Css------------------------- */
+/* --------------Shortbook seller option Css------------------------- */
+
+.plp-mrp2{
+  font-size: 10px !important;
+  color: #0d1321 !important;
+  font-family: var(--font-quicksand) !important;
+  margin-top: 4px !important;
+  margin-left: 8px !important;
+  font-weight: 600 !important;
+}
+
+.watchlist-productTitle2{
+  font-family: var(--font-quicksand) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  padding-left: 8px;
+  color: #0d1321;
+}
+
+/* --------------Shortbook seller option Css------------------------- */
+
+/* -----------------PLP Filter option css------------------- */
+
+.plp-filter-option-header{
+  border-bottom: 1px dashed #dbdbdb;
+  margin: 16px 12px 0 16px;
+  padding: 16px 16px 16px 0px;
+}
+
+.plp-filter-option-header p{
+  font-family: var(--font-opensans);
+  font-size: 12px;
+  color: #5b636a;
+  margin-top: 4px;
+}
+
+.plp-filter-option-header-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plp-filter-option-header-flex h4{
+  font-size: 16px;
+  font-family: var(--font-quicksand);
+  color: var(--marine-blue);
+  font-weight: 600;
+}
+
+.plp-filter-option-header-flex p{
+  font-size: 12px;
+  font-family: var(--font-quicksand);
+  color: var(--purpleish-blue);
+}
+
+.mob-filter-option-search-container{
+  border: 1px solid #dbdbdb;
+  margin-top: 16px;
+  margin-left: 12px;
+  width: 204px;
+  border-radius: 6px;
+}
+
+.mob-filter-option-search-container img {
+  width: 12px;
+  height: 12px;
+  margin: 12px 12px 6px;
+}
+
+.mob-filter-option-search-container  input[type="text"]{
+  width: 128px;
+  border: none;
+  font-size: 10px;
+  color: #7a8186;
+  position: relative;
+  top: -10px;
+  font-family: var(--font-quicksand);
+}
+
+.plp-filter-option-manufacturers-list input[type="checkbox"]{
+  width: 24px;
+  height: 24px;
+  margin: 12px 12px 12px 0px;
+}
+
+.plp-filter-option-close-btn{
+  padding: 12px 16px;
+  width: 144px;
+  height: 44px;
+  background: #fff;
+  opacity: 50%;
+  margin-left: 16px;
+  border-radius: 6px;
+  color: #5b636a;
+  border: 1px solid #dbdbdb;
+  font-size: 14px;
+  font-family: var(--font-quicksand);
+}
+
+.plp-filter-option-apply-btn{
+  padding: 12px 16px;
+  width: 144px;
+  height: 44px;
+  background: #c3cde4;
+  opacity: 50%;
+  margin-right: 16px;
+  border-radius: 6px;
+  color: #fff;
+  border: 1px solid #dbdbdb;
+  font-size: 14px;
+  font-family: var(--font-quicksand);
+}
+
+.plp-filter-option-btn-flex{
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+}
+
+.plp-filter-option-container{
+	position: absolute;
+	top: 20vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+}
+
+/* -----------------PLP Filter option css------------------- */

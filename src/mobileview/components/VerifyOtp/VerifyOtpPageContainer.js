@@ -16,4 +16,9 @@ const mapDispatchToProps = (dispatch) => ({
     ReSendOTP: (username, page) => dispatch(ReSendOTP(username, page)),
 });
 
-export const VerifyOtpPageContainer = connect(mapStateToProps, mapDispatchToProps)(VerifyOtpPage);
+const VerifyOtpPageContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(VerifyOtpPage);
+
+export default VerifyOtpPageContainer

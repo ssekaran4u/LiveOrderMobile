@@ -1,4 +1,7 @@
 import LandingPage from "./LandingPage";
 import "./css/LandingStyle.css";
 
-export const LandingPageContainer = LandingPage;
+
+const LandingPageContainer = connect()(LandingPage);
+
+export default LandingPageContainer
